@@ -1,4 +1,6 @@
 <h2>{{Noticia.titulo}} | <span [ngClass]="{azul: Categoria.color=='blue', rojo: Categoria.color=='red', verde: Categoria.color=='green', darkred: Categoria.color=='darkred', morado: Categoria.color=='purple', darkblue: Categoria.color=='darkblue'}">{{Categoria.titulo}}</span> </h2>
-Autor: {{Noticia.autor}} | Fecha {{Noticia.fecha}}
+<p> Autor: {{Noticia.autor}} | Fecha {{Noticia.fecha}}</p>
+
 <p>{{Noticia.texto}}</p>
+
 <img src="{{Noticia.imagen}}" alt="{{Noticia.imagen}}">
