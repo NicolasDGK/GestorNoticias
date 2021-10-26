@@ -1,1 +1,71 @@
-<p>servicio-al-cliente works!</p>
+<div class="container">
+    <h2>Servicio al Cliente</h2>
+    <div>
+        <form [formGroup]="formulario" (ngSubmit)="validacion()" novalidate>
+            <ul>
+                <li>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre completo">
+                    
+                    <div class="text-danger" *ngIf="formulario.get('nombre')?.errors?.required">
+                        Este campo es obligatorio.
+                    </div>
+                </li>
+                <li>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" formControlName="telefono" class="form-control" id="telefono" placeholder="Teléfono">
+                    
+                    <div class="text-danger" *ngIf="formulario.get('telefono')?.errors?.required">
+                        Este campo es obligatorio.
+                    </div>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('telefono')?.errors?.minlength">
+                        Debe contener 9 dígitos.
+                    </div>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('telefono')?.errors?.maxlength">
+                        Debe contener 9 dígitos.
+                    </div>
+                </li>
+                <li>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="example123@email.com">
+                    
+                    <div class="text-danger" *ngIf="formulario.get('email')?.errors?.required">
+                        Este campo es obligatorio.
+                    </div>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('email')?.errors?.pattern">
+                        Ingrese un email válido.
+                    </div>
+                </li>
+                <li>
+                    <label for="tipo">Dirigido</label>
+                    <select class="form-select" (change)="changeDirigido($event)" id="tipo" formControlName="tipo">
+                        <option value="" disabled>Seleccione el motivo</option>
+                        <option *ngFor="let opcion of Dirigido" [ngValue]="opcion">{{opcion}}</option>
+                    </select>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('tipo')?.errors?.required">
+                        Seleccione un campo.
+                    </div>
+                </li>
+                <li>
+                    <label for="texto">Mensaje</label>
+                    <textarea class="form-control" formControlName="texto" id="texto" cols="30" rows="10" placeholder="Escriba aquí su mensaje."></textarea>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('texto')?.errors?.required">
+                        Este campo es obligatorio.
+                    </div>
+                    
+                    <div class="text-danger" *ngIf="formulario.get('texto')?.errors?.maxlength">
+                        El máximo de carácteres son 500.
+                    </div>
+                </li>
+                <li>
+                    <button class="btn btn-primary" type="submit" [disabled]="formulario.invalid">Enviar</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>

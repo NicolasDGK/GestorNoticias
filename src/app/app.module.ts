@@ -8,6 +8,7 @@ import { DetalleNoticiaComponent } from './components/detalle-noticia/detalle-no
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiaCardComponent } from './components/noticia-card/noticia-card.component';
 import { ServicioAlClienteComponent } from './components/servicio-al-cliente/servicio-al-cliente.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,8 @@ import { ServicioAlClienteComponent } from './components/servicio-al-cliente/ser
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

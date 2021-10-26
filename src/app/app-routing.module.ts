@@ -6,6 +6,7 @@ import { ServicioAlClienteComponent } from './components/servicio-al-cliente/ser
 
 const routes: Routes = [
   {path:"",component:InicioComponent},
+  {path:"inicio",component:InicioComponent},
   {path:"detalleNoticia/:id",component:DetalleNoticiaComponent},
   {path:"detalleNoticia",component:DetalleNoticiaComponent},
   {path:"ServicioAlCliente",component:ServicioAlClienteComponent}
