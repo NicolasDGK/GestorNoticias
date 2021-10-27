@@ -32,7 +32,4 @@ export class ServicioAlClienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  validacion() {
-    
-  }
 }
