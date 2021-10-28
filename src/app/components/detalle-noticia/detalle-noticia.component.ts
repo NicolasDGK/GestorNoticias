@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListaNoticias,Noticias} from '../../interfaces/noticias';
+import { ListaNoticias} from '../../interfaces/noticias';
 import { ActivatedRoute,Route } from '@angular/router';
 import { Categorias,ListaCategorias } from '../../interfaces/categorias'
 
@@ -25,6 +25,7 @@ export class DetalleNoticiaComponent implements OnInit {
   ngOnInit(): void {
     this.Noticia=(ListaNoticias.find(objeto=>objeto.id==this.id));
     this.Categoria=ListaCategorias.find(objeto=>objeto.id==this.Noticia.idCategoria);
+      
     console.log(this.Categoria)
   }
 

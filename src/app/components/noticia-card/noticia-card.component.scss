@@ -1,3 +1,4 @@
+/* Color titulo */
 .azul {
     color: blue;
 }
@@ -5,6 +6,7 @@
 .rojo {
     color: red;
 }
+
 .verde {
     color: green;
 }
@@ -21,6 +23,11 @@
     color: darkblue;
 }
 
+.gris {
+    color: grey;
+}
+
+/* Estilo card */
 h5{
     text-align: center;
 }
@@ -29,32 +36,49 @@ a:hover{
     border: 1px solid black;
 }
 
-.Entretenimiento {
+.card {
+    margin-bottom: 10px;
+}
+
+/* Boton de la noticia */
+.entretenimiento {
     background-color: green;
     color:white;
+    border-color: green;
 }
 
-.Mundo {
+.mundo {
     background-color: blue;
     color: white;
+    border-color: blue;
 }
 
-.Deporte {
+.deporte {
     background-color: darkred;
     color: white;
+    border-color: darkred;
 }
 
-.Economia {
+.economia {
     background-color: purple;
+    border-color: purple;
     color: white;
 }
 
-.Salud {
+.salud {
     background-color: darkblue;
     color: white;
+    border-color: darkblue;
 }
 
-.Tecnologia {
+.tecnologia {
     background-color: red;
     color: white;
+    border-color: red;
+}
+
+.noticias {
+    background-color: grey;
+    color: white;
+    border-color: grey;
 }

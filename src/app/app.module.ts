@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiaCardComponent } from './components/noticia-card/noticia-card.component';
 import { ServicioAlClienteComponent } from './components/servicio-al-cliente/servicio-al-cliente.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     NoticiaCardComponent,
     ServicioAlClienteComponent,
+    FooterComponent,
     
     
   ],

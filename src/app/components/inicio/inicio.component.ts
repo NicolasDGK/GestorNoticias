@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ListaNoticias } from '../../interfaces/noticias';
-import { Noticias } from '../../interfaces/noticias';
+import { ListaNoticias, Noticias } from '../../interfaces/noticias';
+
 
 @Component({
   selector: 'app-inicio',
@@ -9,13 +9,37 @@ import { Noticias } from '../../interfaces/noticias';
 })
 export class InicioComponent implements OnInit {
 
-  ListaNoticias=ListaNoticias;
+  nots:Noticias[] = ListaNoticias;
+  ListaOtrasNoticias:Noticias[] = [];
+  ListaNoticiasDestacadas:Noticias[] = [];
 
   constructor() { 
   
   }
 
   ngOnInit(): void {
+    this.ListaNoticiasDestacadas = this.NoticiasDestacadas();
+    this.ListaOtrasNoticias = this.OtrasNoticias();
   }
 
-}
+  NoticiasDestacadas = ():Noticias[] => {
+    let ArrayNoticias:Noticias[] = [];
+    this.nots.forEach((object:Noticias)=>{
+      if ((object.idCategoria !==0)){ 
+        ArrayNoticias.push(object);
+      }
+    })
+  return ArrayNoticias;
+  }
+
+  OtrasNoticias = ():Noticias[] => {
+    let ArrayNoticias:Noticias[] = [];
+    this.nots.forEach((object:Noticias) =>{
+      if ((object.idCategoria === 0)){
+        ArrayNoticias.push(object);
+      }
+    })
+    return ArrayNoticias;
+  }
+
+} 

@@ -33,5 +33,10 @@ export let ListaCategorias:Array<Categorias>=[
         id:6,
         titulo:"Tecnología",
         color:"red"
+    },
+    {
+        id:0,
+        titulo:"Noticias",
+        color:"grey"
     }
 ]

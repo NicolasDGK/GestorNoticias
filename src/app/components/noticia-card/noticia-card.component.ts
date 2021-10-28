@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Noticias } from 'src/app/interfaces/noticias'
-import { ListaNoticias } from 'src/app/interfaces/noticias'
-import { Categorias,ListaCategorias } from '../../interfaces/categorias'
+import { ListaNoticias} from 'src/app/interfaces/noticias'
+import { Categorias, ListaCategorias } from '../../interfaces/categorias'
 
 @Component({
   selector: 'app-noticia-card',
@@ -28,12 +28,10 @@ export class NoticiaCardComponent implements OnInit {
       texto:'',
     }
   }
-  
 
   ngOnInit(): void {
     this.Categoria=this.categorias.find(
       (categoria:Categorias) => this.noticias.idCategoria == categoria.id)
 
   }
-
 }

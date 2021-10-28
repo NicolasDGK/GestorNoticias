@@ -2,17 +2,18 @@
     <img class="card-img-top" src="{{noticias.imagen}}" alt="{{noticias.imagen}}">
     <div class="card-body">
         <h5 
-        [ngClass]="{azul: Categoria.color=='blue', rojo: Categoria.color=='red', verde: Categoria.color=='green', darkred: Categoria.color=='darkred', morado: Categoria.color=='purple', darkblue: Categoria.color=='darkblue'}"
+        [ngClass]="{azul: Categoria.color=='blue', rojo: Categoria.color=='red', verde: Categoria.color=='green', darkred: Categoria.color=='darkred', morado: Categoria.color=='purple', darkblue: Categoria.color=='darkblue', gris: Categoria.color=='grey'}"
         class="card-title">{{noticias.titulo | titlecase}}</h5>
         <p class="card-text">{{noticias.texto}}</p>
         <a href="#" class="btn btn-primary" 
         [ngClass]="{
-            Entretenimiento: Categoria.color == 'green',
-            Mundo: Categoria.color == 'blue',
-            Deporte: Categoria.color == 'darkred',
-            Economia: Categoria.color == 'morado',
-            Salud: Categoria.color == 'darkblue',
-            Tecnologia: Categoria.color == 'red'
+            entretenimiento: Categoria.color == 'green',
+            mundo: Categoria.color == 'blue',
+            deporte: Categoria.color == 'darkred',
+            economia: Categoria.color == 'purple',
+            salud: Categoria.color == 'darkblue',
+            tecnologia: Categoria.color == 'red',
+            noticias: Categoria.color == 'grey'
           }"
         [routerLink]="['/detalleNoticia',noticias.id]" routerLinkActive="router-link-active">Ver más</a>
     </div>
